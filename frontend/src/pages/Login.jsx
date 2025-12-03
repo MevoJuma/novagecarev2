@@ -17,7 +17,10 @@ export default function Login() {
     setError(null);
     try {
       const res = await loginApi(form);
-      loginUser({ access: res.data.access, refresh: res.data.refresh }, res.data.user);
+      const { access, refresh, user } = res.data;
+
+      // Store tokens and user data
+      loginUser({ access, refresh, user });
 
       //Role based navigation
       if (user.role === 'admin') {
