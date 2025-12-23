@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'caregivers',
     'appointments',
     'meal_data',
+    'admin_dashboard',
 ]
 
 MIDDLEWARE = [
